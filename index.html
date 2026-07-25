@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتيجة الثانوية العامة 2025 - وزارة التربية والتعليم والتعليم الفني</title>
+    <meta name="description" content="استعلام عن نتيجة الثانوية العامة 2025 - الدور الأول - وزارة التربية والتعليم والتعليم الفني - جمهورية مصر العربية">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+            background: #eef1f5;
+            color: #2c3e50;
+            direction: rtl;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ===== EGYPTIAN FLAG TOP STRIPE ===== */
+        .flag-stripe {
+            height: 5px;
+            background: linear-gradient(to left, 
+                #CE1126 0%, #CE1126 33.33%, 
+                #FFFFFF 33.33%, #FFFFFF 66.66%, 
+                #000000 66.66%, #000000 100%);
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: linear-gradient(160deg, #0a1628 0%, #142850 40%, #1a3a6c 70%, #0f2444 100%);
+            padding: 24px 20px 20px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(255,215,0,0.05) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 30%, rgba(255,255,255,0.03) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .header-content {
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .emblem-container {
+            margin-bottom: 8px;
+        }
+
+        .eagle-svg {
+            width: 72px;
+            height: 72px;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+        }
+
+        .country-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.75);
+            letter-spacing: 2px;
+            margin-bottom: 2px;
+        }
+
+        .ministry-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 10px;
+        }
+
+        .main-title {
+            font-size: 30px;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .sub-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffd54f;
+            letter-spacing: 1px;
+        }
+
+        /* ===== NEWS TICKER ===== */
+        .ticker-wrapper {
+            background: linear-gradient(90deg, #b71c1c, #c62828, #b71c1c);
+            overflow: hidden;
+            position: relative;
+            height: 36px;
+            display: flex;
+            align-items: center;
+        }
+
+        .ticker-label {
+            background: #fff;
+            color: #b71c1c;
+            font-weight: 800;
+            font-size: 12px;
+            padding: 4px 14px;
+            position: relative;
+            z-index: 2;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .ticker-label::after {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-top: 18px solid transparent;
+            border-bottom: 18px solid transparent;
+            border-right: 8px solid #fff;
+        }
+
+        .ticker-track {
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            animation: tickerScroll 28s linear infinite;
+            padding-right: 100%;
+        }
+
+        @keyframes tickerScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+        }
+
+        .ticker-content span {
+            margin: 0 30px;
+        }
+
+        .ticker-dot {
+            color: #ffd54f;
+            margin: 0 6px;
+        }
+
+        /* ===== MAIN CONTAINER ===== */
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 28px 16px 40px;
+        }
+
+        /* ===== SEARCH CARD ===== */
+        .search-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 28px 26px 24px;
+            box-shadow: 0 2px 24px rgba(0,0,0,0.07);
+            border-top: 5px solid #142850;
+            position: relative;
+        }
+
+        .search-card::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to left, #ffd54f, transparent, #ffd54f);
+        }
+
+        .search-header {
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        .search-header h2 {
+            font-size: 19px;
+            font-weight: 800;
+            color: #142850;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .search-header p {
+            font-size: 13px;
+            color: #888;
+            margin-top: 4px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 700;
+            color: #3a4a5c;
+            font-size: 14px;
+        }
+
+        .form-group label .required {
+            color: #e53935;
+            margin-right: 2px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 11px 14px;
+            border: 2px solid #e0e4e8;
+            border-radius: 9px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            color: #333;
+            background: #fafbfc;
+            transition: all 0.25s ease;
+            -webkit-appearance: none;
+        }
+
+        .form-group input::placeholder {
+            color: #aab;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1a3a6c;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(26,58,108,0.1);
+        }
+
+        .form-group select {
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: left 14px center;
+            padding-left: 36px;
+        }
+
+        .search-btn {
+            width: 100%;
+            padding: 13px;
+            background: linear-gradient(135deg, #1a3a6c 0%, #142850 60%, #0a1628 100%);
+            color: #fff;
+            border: none;
+            border-radius: 9px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 17px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 6px;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.5px;
+        }
+
+        .search-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(20,40,80,0.35);
+        }
+
+        .search-btn:hover::before {
+            left: 100%;
+        }
+
+        .search-btn:active {
+            transform: translateY(0);
+        }
+
+        /* ===== ERROR MESSAGE ===== */
+        .error-msg {
+            display: none;
+            background: #fff5f5;
+            border: 1px solid #fed7d7;
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-top: 12px;
+            color: #c53030;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+            animation: shake 0.4s ease;
+        }
+
+        .error-msg.active {
+            display: block;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-6px); }
+            75% { transform: translateX(6px); }
+        }
+
+        /* ===== LOADING OVERLAY ===== */
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10, 22, 40, 0.85);
+            backdrop-filter: blur(4px);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .loading-overlay.active {
+            display: flex;
+        }
+
+        .loader {
+            width: 56px;
+            height: 56px;
+            position: relative;
+        }
+
+        .loader::before,
+        .loader::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .loader::before {
+            width: 100%;
+            height: 100%;
+            border: 4px solid rgba(255,213,79,0.2);
+            border-top-color: #ffd54f;
+            animation: spin 0.9s linear infinite;
+        }
+
+        .loader::after {
+            width: 70%;
+            height: 70%;
+            top: 15%;
+            left: 15%;
+            border: 4px solid rgba(255,255,255,0.15);
+            border-bottom-color: #fff;
+            animation: spin 0.6s linear infinite reverse;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .loading-dots::after {
+            content: '';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+            0%   { content: ''; }
+            25%  { content: '.'; }
+            50%  { content: '..'; }
+            75%  { content: '...'; }
+            100% { content: ''; }
+        }
+
+        /* ===== RESULTS SECTION ===== */
+        .results-section {
+            display: none;
+            margin-top: 28px;
+        }
+
+        .results-section.active {
+            display: block;
+            animation: resultsFadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        @keyframes resultsFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Student info card */
+        .student-card {
+            background: linear-gradient(160deg, #142850 0%, #1a3a6c 50%, #1e4d8c 100%);
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 18px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(20,40,80,0.3);
+        }
+
+        .student-card::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,213,79,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .student-card-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffd54f;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .student-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 20px;
+        }
+
+        .info-item {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .info-item .label {
+            font-weight: 500;
+            color: rgba(255,255,255,0.55);
+            font-size: 12px;
+            display: block;
+            margin-bottom: 1px;
+        }
+
+        .info-item .value {
+            font-weight: 700;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        /* Grades card */
+        .grades-card {
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            margin-bottom: 18px;
+        }
+
+        .grades-card-header {
+            padding: 14px 20px;
+            font-size: 15px;
+            font-weight: 800;
+            color: #142850;
+            border-bottom: 2px solid #f0f2f5;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #fafbfc;
+        }
+
+        .grades-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .grades-table thead th {
+            background: #142850;
+            color: #fff;
+            padding: 10px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .grades-table thead th:first-child {
+            text-align: right;
+        }
+
+        .grades-table tbody td {
+            padding: 11px 14px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            border-bottom: 1px solid #f0f2f5;
+            transition: background 0.2s;
+        }
+
+        .grades-table tbody tr:hover {
+            background: #f8f9fc;
+        }
+
+        .grades-table tbody td:first-child {
+            text-align: right;
+            color: #3a4a5c;
+            font-weight: 700;
+        }
+
+        .grades-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Grade colors */
+        .grade-terrible { color: #c62828; }
+        .grade-bad      { color: #d84315; }
+        .grade-mid      { color: #ef6c00; }
+        .grade-ok       { color: #f9a825; }
+        .grade-good     { color: #2e7d32; }
+        .grade-great    { color: #1565c0; }
+
+        /* Total row */
+        .total-row {
+            background: #fffde7 !important;
+        }
+
+        .total-row td {
+            font-weight: 900 !important;
+            font-size: 15px !important;
+            color: #e65100 !important;
+            border-top: 3px solid #ffc107 !important;
+            padding: 13px 14px !important;
+        }
+
+        .total-row:hover {
+            background: #fff9c4 !important;
+        }
+
+        /* Non-total subjects header */
+        .non-total-header {
+            background: #f5f5f5;
+            padding: 8px 20px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #999;
+            border-top: 2px dashed #e0e0e0;
+        }
+
+        /* Status card */
+        .status-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            margin-bottom: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 6px 28px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        .status-passed {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            color: #2e7d32;
+        }
+
+        .status-failed {
+            background: linear-gradient(135deg, #ffebee, #ffcdd2);
+            color: #c62828;
+        }
+
+        .percentage-display {
+            font-size: 52px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin: 6px 0;
+        }
+
+        .pct-terrible { color: #c62828; }
+        .pct-bad      { color: #d84315; }
+        .pct-mid      { color: #ef6c00; }
+        .pct-ok       { color: #f9a825; }
+        .pct-good     { color: #43a047; }
+        .pct-great    { color: #1565c0; }
+
+        .total-display {
+            font-size: 14px;
+            color: #999;
+            font-weight: 600;
+        }
+
+        /* Grade bar */
+        .grade-bar-container {
+            width: 80%;
+            max-width: 320px;
+            height: 10px;
+            background: #eee;
+            border-radius: 10px;
+            margin: 14px auto 0;
+            overflow: hidden;
+        }
+
+        .grade-bar {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+            width: 0;
+        }
+
+        .bar-terrible { background: linear-gradient(90deg, #c62828, #e53935); }
+        .bar-bad      { background: linear-gradient(90deg, #d84315, #f4511e); }
+        .bar-mid      { background: linear-gradient(90deg, #ef6c00, #fb8c00); }
+        .bar-ok       { background: linear-gradient(90deg, #f9a825, #fdd835); }
+        .bar-good     { background: linear-gradient(90deg, #2e7d32, #43a047); }
+        .bar-great    { background: linear-gradient(90deg, #1565c0, #1e88e5); }
+
+        /* Suggestion card */
+        .suggestion-card {
+            background: linear-gradient(160deg, #1b5e20 0%, #2e7d32 40%, #388e3c 100%);
+            border-radius: 14px;
+            padding: 26px 22px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 4px 24px rgba(46,125,50,0.3);
+            margin-bottom: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .suggestion-card::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            left: -30%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .suggestion-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #a5d6a7;
+            margin-bottom: 4px;
+        }
+
+        .suggestion-icon {
+            font-size: 36px;
+            margin-bottom: 6px;
+        }
+
+        .suggestion-text {
+            font-size: 12px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 10px;
+        }
+
+        .college-name {
+            font-size: 24px;
+            font-weight: 900;
+            color: #ffd54f;
+            margin: 8px 0;
+            line-height: 1.4;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .suggestion-note {
+            font-size: 11px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Action buttons */
+        .action-btns {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 9px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-print {
+            background: #37474f;
+            color: #fff;
+        }
+
+        .btn-print:hover {
+            background: #263238;
+            transform: translateY(-1px);
+        }
+
+        .btn-new-search {
+            background: #e3f2fd;
+            color: #1565c0;
+            border: 2px solid #bbdefb;
+        }
+
+        .btn-new-search:hover {
+            background: #bbdefb;
+            transform: translateY(-1px);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: linear-gradient(160deg, #0a1628, #142850);
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 18px 20px;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .footer strong {
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .stat-item {
+            background: #fff;
+            border-radius: 10px;
+            padding: 14px 10px;
+            text-align: center;
+            box-shadow: 0 1px 10px rgba(0,0,0,0.04);
+        }
+
+        .stat-number {
+            font-size: 22px;
+            font-weight: 900;
+            color: #142850;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #999;
+            font-weight: 600;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 640px) {
+            .main-title {
+                font-size: 23px;
+            }
+
+            .sub-title {
+                font-size: 13px;
+            }
+
+            .eagle-svg {
+                width: 56px;
+                height: 56px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .student-info-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .container {
+                padding: 18px 12px 30px;
+            }
+
+            .search-card {
+                padding: 20px 16px;
+            }
+
+            .percentage-display {
+                font-size: 42px;
+            }
+
+            .college-name {
+                font-size: 20px;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .action-btns {
+                flex-direction: column;
+            }
+
+            .grades-table thead th,
+            .grades-table tbody td {
+                padding: 9px 8px;
+                font-size: 12px;
+            }
+
+            .ticker-label {
+                display: none;
+            }
+        }
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            .flag-stripe, .ticker-wrapper, .search-card,
+            .footer, .action-btns, .stats-bar { display: none !important; }
+
+            .header { 
+                background: #142850 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .results-section { margin-top: 0 !important; }
+
+            body { background: #fff; }
+        }
+
+        /* ===== CONFETTI (for good results on randoms) ===== */
+        .confetti-container {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            z-index: 9998;
+            overflow: hidden;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: -20px;
+            animation: confettiFall 3s linear forwards;
+        }
+
+        @keyframes confettiFall {
+            0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Flag stripe -->
+    <div class="flag-stripe"></div>
+
+    <!-- Header -->
+    <header class="header" id="siteHeader">
+        <div class="header-content">
+            <div class="emblem-container">
+                <!-- Egyptian Eagle Emblem SVG -->
+                <svg class="eagle-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="48" fill="rgba(255,215,0,0.12)" stroke="#ffd54f" stroke-width="2"/>
+                    <text x="50" y="58" text-anchor="middle" font-size="48" fill="#ffd54f">🦅</text>
+                </svg>
+            </div>
+            <div class="country-name">جمهورية مصر العربية</div>
+            <div class="ministry-name">وزارة التربية والتعليم والتعليم الفني</div>
+            <h1 class="main-title">نتيجة الثانوية العامة 2025</h1>
+            <div class="sub-title">الدور الأول — يوليو 2025</div>
+        </div>
+    </header>
+
+    <!-- News Ticker -->
+    <div class="ticker-wrapper">
+        <div class="ticker-label">عاجل</div>
+        <div class="ticker-track">
+            <div class="ticker-content">
+                <span>⚡ تم الانتهاء من تصحيح جميع أوراق الامتحانات وإعلان النتيجة بشكل رسمي</span>
+                <span class="ticker-dot">●</span>
+                <span>نسبة النجاح العامة على مستوى الجمهورية 78.4%</span>
+                <span class="ticker-dot">●</span>
+                <span>أوائل الثانوية العامة شعبة علمي رياضة: الطالب محمد أحمد عبد الله بمجموع 407/410</span>
+                <span class="ticker-dot">●</span>
+                <span>وزير التربية والتعليم يهنئ أوائل الثانوية العامة وجميع الناجحين</span>
+                <span class="ticker-dot">●</span>
+                <span>بدء المرحلة الأولى للتنسيق الأسبوع القادم</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number" id="visitorCount">847,293</div>
+                <div class="stat-label">زائر للموقع</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">693,516</div>
+                <div class="stat-label">طالب مسجل</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">78.4%</div>
+                <div class="stat-label">نسبة النجاح</div>
+            </div>
+        </div>
+
+        <!-- Search Form -->
+        <div class="search-card">
+            <div class="search-header">
+                <h2>
+                    <span>📋</span>
+                    استعلام عن نتيجة الطالب
+                </h2>
+                <p>أدخل البيانات التالية للاستعلام عن النتيجة</p>
+            </div>
+            <form id="searchForm" autocomplete="off">
+                <div class="form-group full-width">
+                    <label for="studentName"><span class="required">*</span> اسم الطالب</label>
+                    <input type="text" id="studentName" placeholder="أدخل اسم الطالب رباعي" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="seatNumber"><span class="required">*</span> رقم الجلوس</label>
+                        <input type="text" id="seatNumber" placeholder="مثال: 2530000" required 
+                               inputmode="numeric" pattern="[0-9]*">
+                    </div>
+                    <div class="form-group">
+                        <label for="specification"><span class="required">*</span> الشعبة</label>
+                        <select id="specification" required>
+                            <option value="">— اختر الشعبة —</option>
+                            <option value="علمي رياضة">علمي رياضة</option>
+                            <option value="علمي علوم">علمي علوم</option>
+                            <option value="أدبي">أدبي</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="search-btn" id="searchBtn">
+                    استعلام عن النتيجة
+                </button>
+                <div class="error-msg" id="errorMsg"></div>
+            </form>
+        </div>
+
+        <!-- Results (injected by JS) -->
+        <div class="results-section" id="resultsSection"></div>
+
+    </main>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+        <div class="loading-text">جاري تحميل النتيجة<span class="loading-dots"></span></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><strong>وزارة التربية والتعليم والتعليم الفني</strong> — جمهورية مصر العربية</p>
+        <p>آخر تحديث للنتيجة: الجمعة 25 يوليو 2025 — 10:00 مساءً</p>
+        <p>جميع الحقوق محفوظة © 2025</p>
+    </footer>
+
+    <script>
+    // ============================================================
+    //  PRANK DATA — Friends' pre-configured results
+    // ============================================================
+    const FRIENDS = {
+        '2532057': {
+            displayName: 'بودي كامل',
+            specification: 'علمي رياضة',
+            grades: [
+                { subject: 'اللغة العربية',            score: 42,  max: 80 },
+                { subject: 'اللغة الإنجليزية',         score: 26,  max: 50 },
+                { subject: 'اللغة الإيطالية',          score: 21,  max: 40 },
+                { subject: 'الكيمياء',                 score: 31,  max: 60 },
+                { subject: 'الفيزياء',                 score: 30,  max: 60 },
+                { subject: 'الرياضيات التطبيقية',      score: 32,  max: 60 },
+                { subject: 'الرياضيات البحتة',         score: 30,  max: 60 },
+            ],
+            nonTotal: [
+                { subject: 'التربية الدينية',  score: 14, max: 25 },
+                { subject: 'التربية الوطنية',  score: 13, max: 25 },
+            ],
+            suggestion: 'معهد دعك ازبار اسوان',
+        },
+        '2537649': {
+            displayName: 'حماصه',
+            specification: 'علمي رياضة',
+            grades: [
+                { subject: 'اللغة العربية',            score: 40,  max: 80 },
+                { subject: 'اللغة الإنجليزية',         score: 25,  max: 50 },
+                { subject: 'اللغة الإيطالية',          score: 20,  max: 40 },
+                { subject: 'الكيمياء',                 score: 31,  max: 60 },
+                { subject: 'الفيزياء',                 score: 30,  max: 60 },
+                { subject: 'الرياضيات التطبيقية',      score: 31,  max: 60 },
+                { subject: 'الرياضيات البحتة',         score: 30,  max: 60 },
+            ],
+            nonTotal: [
+                { subject: 'التربية الدينية',  score: 13, max: 25 },
+                { subject: 'التربية الوطنية',  score: 14, max: 25 },
+            ],
+            suggestion: 'معهد دعك ازبار اسوان',
+        },
+    };
+
+    // ============================================================
+    //  SUBJECT TEMPLATES (for random users)
+    // ============================================================
+    const SUBJECT_TEMPLATES = {
+        'علمي رياضة': [
+            { subject: 'اللغة العربية',            max: 80 },
+            { subject: 'اللغة الإنجليزية',         max: 50 },
+            { subject: 'اللغة الإيطالية',          max: 40 },
+            { subject: 'الكيمياء',                 max: 60 },
+            { subject: 'الفيزياء',                 max: 60 },
+            { subject: 'الرياضيات التطبيقية',      max: 60 },
+            { subject: 'الرياضيات البحتة',         max: 60 },
+        ],
+        'علمي علوم': [
+            { subject: 'اللغة العربية',            max: 80 },
+            { subject: 'اللغة الإنجليزية',         max: 50 },
+            { subject: 'اللغة الإيطالية',          max: 40 },
+            { subject: 'الكيمياء',                 max: 60 },
+            { subject: 'الفيزياء',                 max: 60 },
+            { subject: 'الأحياء والجيولوجيا',      max: 60 },
+        ],
+        'أدبي': [
+            { subject: 'اللغة العربية',            max: 80 },
+            { subject: 'اللغة الإنجليزية',         max: 50 },
+            { subject: 'اللغة الإيطالية',          max: 40 },
+            { subject: 'التاريخ',                  max: 60 },
+            { subject: 'الجغرافيا',                max: 60 },
+            { subject: 'الفلسفة والمنطق',          max: 60 },
+            { subject: 'علم النفس والاجتماع',      max: 60 },
+        ],
+    };
+
+    // Random college suggestions for non-friends
+    const COLLEGE_SUGGESTIONS = {
+        'علمي رياضة': [
+            'كلية الهندسة — جامعة القاهرة',
+            'كلية الحاسبات والمعلومات — جامعة عين شمس',
+            'كلية الهندسة — جامعة الإسكندرية',
+            'كلية العلوم — جامعة المنصورة',
+            'كلية الهندسة — جامعة المنصورة',
+        ],
+        'علمي علوم': [
+            'كلية الطب — جامعة القاهرة',
+            'كلية الصيدلة — جامعة عين شمس',
+            'كلية طب الأسنان — جامعة الإسكندرية',
+            'كلية العلاج الطبيعي — جامعة القاهرة',
+            'كلية العلوم — جامعة القاهرة',
+        ],
+        'أدبي': [
+            'كلية الآداب — جامعة القاهرة',
+            'كلية التجارة — جامعة عين شمس',
+            'كلية الحقوق — جامعة الإسكندرية',
+            'كلية الإعلام — جامعة القاهرة',
+            'كلية الألسن — جامعة عين شمس',
+        ],
+    };
+
+    // ============================================================
+    //  UTILITY FUNCTIONS
+    // ============================================================
+    function rand(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function pick(arr) {
+        return arr[rand(0, arr.length - 1)];
+    }
+
+    function gradeColorClass(score, max) {
+        const pct = (score / max) * 100;
+        if (pct < 55) return 'grade-terrible';
+        if (pct < 65) return 'grade-bad';
+        if (pct < 72) return 'grade-mid';
+        if (pct < 80) return 'grade-ok';
+        if (pct < 90) return 'grade-good';
+        return 'grade-great';
+    }
+
+    function pctColorClass(pct) {
+        if (pct < 55) return 'pct-terrible';
+        if (pct < 65) return 'pct-bad';
+        if (pct < 72) return 'pct-mid';
+        if (pct < 80) return 'pct-ok';
+        if (pct < 90) return 'pct-good';
+        return 'pct-great';
+    }
+
+    function barColorClass(pct) {
+        if (pct < 55) return 'bar-terrible';
+        if (pct < 65) return 'bar-bad';
+        if (pct < 72) return 'bar-mid';
+        if (pct < 80) return 'bar-ok';
+        if (pct < 90) return 'bar-good';
+        return 'bar-great';
+    }
+
+    function generateRandomGrades(spec) {
+        return SUBJECT_TEMPLATES[spec].map(s => ({
+            subject: s.subject,
+            score: rand(Math.ceil(s.max * 0.55), Math.ceil(s.max * 0.95)),
+            max: s.max,
+        }));
+    }
+
+    function generateNonTotal() {
+        return [
+            { subject: 'التربية الدينية',  score: rand(16, 23), max: 25 },
+            { subject: 'التربية الوطنية',  score: rand(16, 23), max: 25 },
+        ];
+    }
+
+    // ============================================================
+    //  FAKE VISITOR COUNTER
+    // ============================================================
+    (function fakeCounter() {
+        const el = document.getElementById('visitorCount');
+        let n = 847293;
+        setInterval(() => {
+            n += rand(1, 7);
+            el.textContent = n.toLocaleString('en-US');
+        }, rand(2000, 5000));
+    })();
+
+    // ============================================================
+    //  FORM SUBMISSION
+    // ============================================================
+    const form        = document.getElementById('searchForm');
+    const overlay     = document.getElementById('loadingOverlay');
+    const resultsDiv  = document.getElementById('resultsSection');
+    const errorMsg    = document.getElementById('errorMsg');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        errorMsg.classList.remove('active');
+
+        const name     = document.getElementById('studentName').value.trim();
+        const seat     = document.getElementById('seatNumber').value.trim();
+        const spec     = document.getElementById('specification').value;
+
+        if (!name || !seat || !spec) {
+            showError('برجاء ملء جميع البيانات المطلوبة');
+            return;
+        }
+        if (!/^\d+$/.test(seat)) {
+            showError('رقم الجلوس يجب أن يحتوي على أرقام فقط');
+            return;
+        }
+
+        // Show loading overlay
+        overlay.classList.add('active');
+        resultsDiv.classList.remove('active');
+
+        // Simulate network delay (2–4 seconds)
+        const delay = rand(2200, 4200);
+        setTimeout(() => {
+            overlay.classList.remove('active');
+            renderResults(name, seat, spec);
+        }, delay);
+    });
+
+    function showError(msg) {
+        errorMsg.textContent = msg;
+        errorMsg.classList.add('active');
+    }
+
+    // ============================================================
+    //  RENDER RESULTS
+    // ============================================================
+    function renderResults(enteredName, seatNumber, spec) {
+        const isFriend = FRIENDS.hasOwnProperty(seatNumber);
+
+        let displayName, displaySpec, grades, nonTotal, suggestion;
+
+        if (isFriend) {
+            const f     = FRIENDS[seatNumber];
+            displayName = f.displayName;
+            displaySpec = f.specification;
+            grades      = f.grades;
+            nonTotal    = f.nonTotal;
+            suggestion  = f.suggestion;
+        } else {
+            displayName = enteredName;
+            displaySpec = spec;
+            grades      = generateRandomGrades(spec);
+            nonTotal    = generateNonTotal();
+            suggestion  = pick(COLLEGE_SUGGESTIONS[spec]);
+        }
+
+        // Totals
+        let totalScore = 0, totalMax = 0;
+        grades.forEach(g => { totalScore += g.score; totalMax += g.max; });
+        const pct = ((totalScore / totalMax) * 100).toFixed(2);
+        const passed = pct >= 50;
+
+        // Build grades rows
+        let gradesRows = grades.map(g => {
+            const p = ((g.score / g.max) * 100).toFixed(1);
+            const cls = gradeColorClass(g.score, g.max);
+            return `<tr>
+                <td>${g.subject}</td>
+                <td class="${cls}">${g.score}</td>
+                <td>${g.max}</td>
+                <td class="${cls}">${p}%</td>
+            </tr>`;
+        }).join('');
+
+        // Total row
+        gradesRows += `<tr class="total-row">
+            <td>المجموع الكلي</td>
+            <td>${totalScore}</td>
+            <td>${totalMax}</td>
+            <td>${pct}%</td>
+        </tr>`;
+
+        // Non-total rows
+        let nonTotalRows = nonTotal.map(g => {
+            const p = ((g.score / g.max) * 100).toFixed(1);
+            const cls = gradeColorClass(g.score, g.max);
+            return `<tr>
+                <td>${g.subject}</td>
+                <td class="${cls}">${g.score}</td>
+                <td>${g.max}</td>
+                <td class="${cls}">${p}%</td>
+            </tr>`;
+        }).join('');
+
+        const statusClass = passed ? 'status-passed' : 'status-failed';
+        const statusText  = passed ? '✅ ناجح' : '❌ راسب';
+        const pctCls      = pctColorClass(parseFloat(pct));
+        const barCls      = barColorClass(parseFloat(pct));
+
+        resultsDiv.innerHTML = `
+            <!-- Student Info -->
+            <div class="student-card">
+                <div class="student-card-title">📋 بيانات الطالب</div>
+                <div class="student-info-grid">
+                    <div class="info-item">
+                        <span class="label">اسم الطالب</span>
+                        <span class="value">${displayName}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">رقم الجلوس</span>
+                        <span class="value">${seatNumber}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">الشعبة</span>
+                        <span class="value">${displaySpec}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">الدور</span>
+                        <span class="value">الأول — 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grades Table -->
+            <div class="grades-card">
+                <div class="grades-card-header">📊 درجات المواد — تضاف للمجموع</div>
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>المادة</th>
+                            <th>الدرجة</th>
+                            <th>النهاية العظمى</th>
+                            <th>النسبة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${gradesRows}
+                    </tbody>
+                </table>
+                <div class="non-total-header">مواد لا تضاف للمجموع</div>
+                <table class="grades-table">
+                    <tbody>
+                        ${nonTotalRows}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Status -->
+            <div class="status-card">
+                <div class="status-badge ${statusClass}">${statusText}</div>
+                <div class="percentage-display ${pctCls}">${pct}%</div>
+                <div class="total-display">المجموع الكلي: ${totalScore} من ${totalMax}</div>
+                <div class="grade-bar-container">
+                    <div class="grade-bar ${barCls}" id="gradeBar"></div>
+                </div>
+            </div>
+
+            <!-- College Suggestion -->
+            <div class="suggestion-card">
+                <div class="suggestion-icon">🎓</div>
+                <div class="suggestion-label">الكلية المرشحة وفقاً لمجموعك</div>
+                <div class="suggestion-text">بناءً على مجموعك الكلي ونسبتك المئوية ونتائج تنسيق العام السابق</div>
+                <div class="college-name">${suggestion}</div>
+                <div class="suggestion-note">* هذا الترشيح استرشادي بناءً على الحد الأدنى للقبول في العام السابق</div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-btns">
+                <button class="action-btn btn-print" onclick="window.print()">
+                    🖨️ طباعة النتيجة
+                </button>
+                <button class="action-btn btn-new-search" onclick="newSearch()">
+                    🔄 استعلام جديد
+                </button>
+            </div>
+        `;
+
+        resultsDiv.classList.add('active');
+
+        // Animate the percentage bar after a short delay
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                const bar = document.getElementById('gradeBar');
+                if (bar) bar.style.width = pct + '%';
+            }, 200);
+        });
+
+        // Scroll to results
+        setTimeout(() => {
+            resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+    }
+
+    // ============================================================
+    //  NEW SEARCH
+    // ============================================================
+    function newSearch() {
+        resultsDiv.classList.remove('active');
+        resultsDiv.innerHTML = '';
+        form.reset();
+        document.querySelector('.search-card').scrollIntoView({ behavior: 'smooth' });
+    }
+    </script>
+
+</body>
+</html>
