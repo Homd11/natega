@@ -995,9 +995,9 @@
                         <label for="specification"><span class="required">*</span> الشعبة</label>
                         <select id="specification" required>
                             <option value="">— اختر الشعبة —</option>
-                            <option value="علمي رياضة">علمي رياضة</option>
-                            <option value="علمي علوم">علمي علوم</option>
-                            <option value="أدبي">أدبي</option>
+                            <option value="1">علمي رياضة</option>
+                            <option value="2">علمي علوم</option>
+                            <option value="3">أدبي</option>
                         </select>
                     </div>
                 </div>
@@ -1030,10 +1030,13 @@
     // ============================================================
     //  PRANK DATA — Friends' pre-configured results
     // ============================================================
+    // Spec ID map: 1 = علمي رياضة, 2 = علمي علوم, 3 = أدبي
+    const SPEC_NAMES = { '1': 'علمي رياضة', '2': 'علمي علوم', '3': 'أدبي' };
+
     const FRIENDS = {
         '2532057': {
             displayName: 'بودي كامل',
-            specification: 'علمي رياضة',
+            specId: '1',
             grades: [
                 { subject: 'اللغة العربية',            score: 42,  max: 80 },
                 { subject: 'اللغة الإنجليزية',         score: 26,  max: 50 },
@@ -1051,7 +1054,7 @@
         },
         '2537649': {
             displayName: 'حماصه',
-            specification: 'علمي رياضة',
+            specId: '1',
             grades: [
                 { subject: 'اللغة العربية',            score: 40,  max: 80 },
                 { subject: 'اللغة الإنجليزية',         score: 25,  max: 50 },
@@ -1073,7 +1076,7 @@
     //  SUBJECT TEMPLATES (for random users)
     // ============================================================
     const SUBJECT_TEMPLATES = {
-        'علمي رياضة': [
+        '1': [
             { subject: 'اللغة العربية',            max: 80 },
             { subject: 'اللغة الإنجليزية',         max: 50 },
             { subject: 'اللغة الإيطالية',          max: 40 },
@@ -1082,7 +1085,7 @@
             { subject: 'الرياضيات التطبيقية',      max: 60 },
             { subject: 'الرياضيات البحتة',         max: 60 },
         ],
-        'علمي علوم': [
+        '2': [
             { subject: 'اللغة العربية',            max: 80 },
             { subject: 'اللغة الإنجليزية',         max: 50 },
             { subject: 'اللغة الإيطالية',          max: 40 },
@@ -1090,7 +1093,7 @@
             { subject: 'الفيزياء',                 max: 60 },
             { subject: 'الأحياء والجيولوجيا',      max: 60 },
         ],
-        'أدبي': [
+        '3': [
             { subject: 'اللغة العربية',            max: 80 },
             { subject: 'اللغة الإنجليزية',         max: 50 },
             { subject: 'اللغة الإيطالية',          max: 40 },
@@ -1103,21 +1106,21 @@
 
     // Random college suggestions for non-friends
     const COLLEGE_SUGGESTIONS = {
-        'علمي رياضة': [
+        '1': [
             'كلية الهندسة — جامعة القاهرة',
             'كلية الحاسبات والمعلومات — جامعة عين شمس',
             'كلية الهندسة — جامعة الإسكندرية',
             'كلية العلوم — جامعة المنصورة',
             'كلية الهندسة — جامعة المنصورة',
         ],
-        'علمي علوم': [
+        '2': [
             'كلية الطب — جامعة القاهرة',
             'كلية الصيدلة — جامعة عين شمس',
             'كلية طب الأسنان — جامعة الإسكندرية',
             'كلية العلاج الطبيعي — جامعة القاهرة',
             'كلية العلوم — جامعة القاهرة',
         ],
-        'أدبي': [
+        '3': [
             'كلية الآداب — جامعة القاهرة',
             'كلية التجارة — جامعة عين شمس',
             'كلية الحقوق — جامعة الإسكندرية',
@@ -1165,24 +1168,9 @@
         return 'bar-great';
     }
 
-    function resolveSpec(spec) {
-        // Normalize: trim whitespace, normalize Unicode
-        const s = spec.trim().normalize('NFC');
-        if (SUBJECT_TEMPLATES[s]) return s;
-        // Fuzzy match: check if spec contains key words
-        const keys = Object.keys(SUBJECT_TEMPLATES);
-        for (const key of keys) {
-            if (s.includes('علوم') && key.includes('علوم')) return key;
-            if (s.includes('رياضة') && key.includes('رياضة')) return key;
-            if (s.includes('أدبي') && key.includes('أدبي')) return key;
-            if (s.includes('ادبي') && key.includes('أدبي')) return key;
-        }
-        return keys[0]; // fallback
-    }
-
-    function generateRandomGrades(spec) {
-        const resolved = resolveSpec(spec);
-        return SUBJECT_TEMPLATES[resolved].map(s => ({
+    function generateRandomGrades(specId) {
+        const template = SUBJECT_TEMPLATES[specId] || SUBJECT_TEMPLATES['1'];
+        return template.map(s => ({
             subject: s.subject,
             score: rand(Math.ceil(s.max * 0.55), Math.ceil(s.max * 0.95)),
             max: s.max,
@@ -1253,25 +1241,24 @@
     // ============================================================
     //  RENDER RESULTS
     // ============================================================
-    function renderResults(enteredName, seatNumber, spec) {
+    function renderResults(enteredName, seatNumber, specId) {
         const isFriend = FRIENDS.hasOwnProperty(seatNumber);
-        const resolvedSpec = resolveSpec(spec);
 
         let displayName, displaySpec, grades, nonTotal, suggestion;
 
         if (isFriend) {
             const f     = FRIENDS[seatNumber];
             displayName = f.displayName;
-            displaySpec = f.specification;
+            displaySpec = SPEC_NAMES[f.specId];
             grades      = f.grades;
             nonTotal    = f.nonTotal;
             suggestion  = f.suggestion;
         } else {
             displayName = enteredName;
-            displaySpec = spec;
-            grades      = generateRandomGrades(resolvedSpec);
+            displaySpec = SPEC_NAMES[specId] || specId;
+            grades      = generateRandomGrades(specId);
             nonTotal    = generateNonTotal();
-            suggestion  = pick(COLLEGE_SUGGESTIONS[resolvedSpec] || COLLEGE_SUGGESTIONS['علمي رياضة']);
+            suggestion  = pick(COLLEGE_SUGGESTIONS[specId] || COLLEGE_SUGGESTIONS['1']);
         }
 
         // Totals
