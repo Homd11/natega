@@ -1165,8 +1165,24 @@
         return 'bar-great';
     }
 
+    function resolveSpec(spec) {
+        // Normalize: trim whitespace, normalize Unicode
+        const s = spec.trim().normalize('NFC');
+        if (SUBJECT_TEMPLATES[s]) return s;
+        // Fuzzy match: check if spec contains key words
+        const keys = Object.keys(SUBJECT_TEMPLATES);
+        for (const key of keys) {
+            if (s.includes('علوم') && key.includes('علوم')) return key;
+            if (s.includes('رياضة') && key.includes('رياضة')) return key;
+            if (s.includes('أدبي') && key.includes('أدبي')) return key;
+            if (s.includes('ادبي') && key.includes('أدبي')) return key;
+        }
+        return keys[0]; // fallback
+    }
+
     function generateRandomGrades(spec) {
-        return SUBJECT_TEMPLATES[spec].map(s => ({
+        const resolved = resolveSpec(spec);
+        return SUBJECT_TEMPLATES[resolved].map(s => ({
             subject: s.subject,
             score: rand(Math.ceil(s.max * 0.55), Math.ceil(s.max * 0.95)),
             max: s.max,
@@ -1239,6 +1255,7 @@
     // ============================================================
     function renderResults(enteredName, seatNumber, spec) {
         const isFriend = FRIENDS.hasOwnProperty(seatNumber);
+        const resolvedSpec = resolveSpec(spec);
 
         let displayName, displaySpec, grades, nonTotal, suggestion;
 
@@ -1252,9 +1269,9 @@
         } else {
             displayName = enteredName;
             displaySpec = spec;
-            grades      = generateRandomGrades(spec);
+            grades      = generateRandomGrades(resolvedSpec);
             nonTotal    = generateNonTotal();
-            suggestion  = pick(COLLEGE_SUGGESTIONS[spec]);
+            suggestion  = pick(COLLEGE_SUGGESTIONS[resolvedSpec] || COLLEGE_SUGGESTIONS['علمي رياضة']);
         }
 
         // Totals
